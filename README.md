@@ -1,2 +1,2 @@
 # MinimSharp
-.NET wrapper for Minim
+.NET wrapper for [Minim](https://github.com/ddf/Minim)
