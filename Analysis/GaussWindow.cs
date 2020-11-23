@@ -23,8 +23,7 @@ namespace MinimSharp.Analysis
         {
             if (alpha < 0.0 || alpha > 0.5)
             {
-                //TODO: add the error message
-                // Minim.error("Range for GaussWindow out of bounds. Value must be <= 0.5");
+                MinimSharp.Error("Range for GaussWindow out of bounds. Value must be <= 0.5");
                 return;
             }
             this.alpha = alpha;

@@ -33,7 +33,7 @@ namespace MinimSharp.Analysis
         {
             if (samples.Length != timeSize)
             {
-                //Minim.error("DFT.forward: The length of the passed sample buffer must be equal to DFT.timeSize().");
+                MinimSharp.Error("DFT.forward: The length of the passed sample buffer must be equal to DFT.timeSize().");
                 return;
             }
             DoWindow(samples);

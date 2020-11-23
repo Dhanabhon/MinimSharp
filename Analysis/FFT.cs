@@ -30,7 +30,7 @@ namespace MinimSharp.Analysis
         {
             if (s < 0)
             {
-                //Minim.error("Can't scale a frequency band by a negative value.");
+                MinimSharp.Error("Can't scale a frequency band by a negative value.");
                 return;
             }
 
@@ -49,7 +49,7 @@ namespace MinimSharp.Analysis
         {
             if (a < 0)
             {
-                //Minim.error("Can't set a frequency band to a negative value.");
+                MinimSharp.Error("Can't set a frequency band to a negative value.");
                 return;
             }
             if (real[i] == 0 && imag[i] == 0)
@@ -76,10 +76,6 @@ namespace MinimSharp.Analysis
         {
             for (int halfSize = 1; halfSize < real.Length; halfSize *= 2)
             {
-                // float k = -(float)Math.PI/halfSize;
-                // phase shift step
-                // float phaseShiftStepR = (float)Math.cos(k);
-                // float phaseShiftStepI = (float)Math.sin(k);
                 // using lookup table
                 float phaseShiftStepR = Cos(halfSize);
                 float phaseShiftStepI = Sin(halfSize);
@@ -109,7 +105,7 @@ namespace MinimSharp.Analysis
         {
             if (buffer.Length != timeSize)
             {
-                //Minim.error("FFT.forward: The length of the passed sample buffer must be equal to timeSize().");
+                MinimSharp.Error("FFT.forward: The length of the passed sample buffer must be equal to timeSize().");
                 return;
             }
             DoWindow(buffer);
@@ -152,7 +148,7 @@ namespace MinimSharp.Analysis
         {
             if (buffer.Length > real.Length)
             {
-                //Minim.error("FFT.inverse: the passed array's length must equal FFT.timeSize().");
+                MinimSharp.Error("FFT.inverse: the passed array's length must equal FFT.timeSize().");
                 return;
             }
             // conjugate

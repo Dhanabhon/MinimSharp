@@ -74,7 +74,7 @@ namespace MinimSharp.Analysis
         {
             if (real.Length != r.Length && imag.Length != i.Length)
             {
-                //Minim.error("FourierTransform.setComplex: the two arrays must be the same length as their member counterparts.");
+                MinimSharp.Error("FourierTransform.setComplex: the two arrays must be the same length as their member counterparts.");
             }
             else
             {
@@ -152,7 +152,7 @@ namespace MinimSharp.Analysis
         {
             if (numAvg > spectrum.Length / 2)
             {
-                // Minim.error("The number of averages for this transform can be at most " + spectrum.Length / 2 + ".");
+                MinimSharp.Error("The number of averages for this transform can be at most " + spectrum.Length / 2 + ".");
                 return;
             }
             else
@@ -170,7 +170,7 @@ namespace MinimSharp.Analysis
             {
                 octaves++;
             }
-            // Minim.debug("Number of octaves = " + octaves);
+            MinimSharp.Debug("Number of octaves = " + octaves);
             avgPerOctave = bandsPerOctave;
             averages = new float[octaves * bandsPerOctave];
             whichAverage = LOGAVG;
@@ -371,7 +371,7 @@ namespace MinimSharp.Analysis
         {
             if (buffer.Length - startAt < timeSize)
             {
-                // Minim.error("FourierTransform.forward: not enough samples in the buffer between " + startAt + " and " + buffer.Length + " to perform a transform.");
+                MinimSharp.Error("FourierTransform.forward: not enough samples in the buffer between " + startAt + " and " + buffer.Length + " to perform a transform.");
                 return;
             }
 
