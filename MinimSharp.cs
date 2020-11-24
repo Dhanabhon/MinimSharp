@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace MinimSharp
 {
@@ -24,7 +22,7 @@ namespace MinimSharp
         {
             if (DEBUG)
             {
-                string[] lines = message.Split("\n");
+                string[] lines = message.Split('\n');
                 Console.WriteLine("=== Minim Debug ===");
                 for (int i = 0; i < lines.Length; i++)
                 {
@@ -33,7 +31,7 @@ namespace MinimSharp
                 Console.WriteLine();
             }
         }
-        
+
         public void DebugOn()
         {
             DEBUG = true;
