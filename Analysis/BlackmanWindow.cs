@@ -33,7 +33,7 @@ namespace MinimSharp.Analysis
             return a0 - a1 * (float)Math.Cos(TWO_PI * index / (length - 1)) + a2 * (float)Math.Cos(4 * Math.PI * index / (length - 1));
         }
 
-        public string ToString()
+        public override string ToString()
         {
             return "Blackman Window";
         }

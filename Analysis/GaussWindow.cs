@@ -34,7 +34,7 @@ namespace MinimSharp.Analysis
             return (float)Math.Pow(Math.E, -0.5 * Math.Pow((index - (length - 1) / (double)2) / (this.alpha * (length - 1) / 2.0), 2.0));
         }
 
-        public string ToString()
+        public override string ToString()
         {
             return "Gauss Window";
         }

@@ -18,7 +18,7 @@ namespace MinimSharp
             return 2.0f / (length - 1) * ((length - 1) / 2.0f - Math.Abs(index - (length - 1) / 2.0f));
         }
 
-        public string ToString()
+        public override string ToString()
         {
             return "Bartlett Window";
         }

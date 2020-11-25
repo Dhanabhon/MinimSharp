@@ -18,7 +18,7 @@ namespace MinimSharp.Analysis
             return 0.5f * (1.0f - (float)Math.Cos(TWO_PI * index / (length - 1.0f)));
         }
 
-        public string ToString()
+        public override string ToString()
         {
             return "Hann Window";
         }

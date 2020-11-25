@@ -18,7 +18,7 @@ namespace MinimSharp.Analysis
             return (float)(Math.Cos(Math.PI * index / (length - 1) - Math.PI / 2.0));
         }
 
-        public string ToString()
+        public override string ToString()
         {
             return "Cosine Window";
         }

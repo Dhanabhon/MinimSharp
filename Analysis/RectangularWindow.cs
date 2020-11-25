@@ -17,7 +17,7 @@ namespace MinimSharp.Analysis
             return 1.0f;
         }
 
-        public string ToString()
+        public override string ToString()
         {
             return "Rectangular Window";
         }

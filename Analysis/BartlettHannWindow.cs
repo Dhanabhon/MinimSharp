@@ -18,7 +18,7 @@ namespace MinimSharp.Analysis
             return (float)(0.62 - 0.48 * Math.Abs(index / (length - 1) - 0.5) - 0.38 * Math.Cos(TWO_PI * index / (length - 1)));
         }
 
-        public string ToString()
+        public override string ToString()
         {
             return "Bartlett-Hann Window";
         }

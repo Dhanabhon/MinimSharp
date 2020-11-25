@@ -18,7 +18,7 @@ namespace MinimSharp.Analysis
             return 0.54f - 0.46f * (float)Math.Cos(TWO_PI * index / (length - 1.0f));
         }
 
-        public string ToString()
+        public override string ToString()
         {
             return "Hamming Window";
         }

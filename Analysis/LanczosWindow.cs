@@ -19,7 +19,7 @@ namespace MinimSharp.Analysis
             return (float)(Math.Sin(Math.PI * x) / (Math.PI * x));
         }
 
-        public string ToString()
+        public override string ToString()
         {
             return "Lanczos Window";
         }

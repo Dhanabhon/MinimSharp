@@ -17,7 +17,7 @@ namespace MinimSharp.Analysis
             return 2.0f / length * (length / 2.0f - Math.Abs(index - (length - 1) / 2.0f));
         }
 
-        public string ToString()
+        public override string ToString()
         {
             return "Triangular Window";
         }
